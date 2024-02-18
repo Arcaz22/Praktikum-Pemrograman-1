@@ -24,6 +24,42 @@ public class StrukturList {
     }
   }
 
+  public void addHead(int data) {
+    Node newNode;
+    
+    newNode = new Node(data);
+    if (isEmpty()) {
+        HEAD = newNode;
+    } else {
+        newNode.setNext(HEAD);
+        HEAD = newNode;
+    }
+  }
+
+  public void addMid(int data, int position) {
+    Node previousNode = null, currentNode, newNode;
+    int i = 1;
+
+    newNode = new Node(data);
+    if (HEAD == null) {
+      HEAD = newNode;
+    } else {
+      currentNode = HEAD;
+      if (position == 1) {
+          newNode.next = currentNode;
+          HEAD = newNode;
+      } else {
+          while (currentNode != null && i < position) {
+              previousNode = currentNode;
+              currentNode = currentNode.next;
+              i++;
+          }
+          previousNode.next = newNode;
+          newNode.next = currentNode;
+      }
+    }
+  }
+
   public void display() {
     Node currentNode = HEAD;
     while (currentNode != null) {
