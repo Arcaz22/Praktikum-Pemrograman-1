@@ -1,18 +1,41 @@
+<br/>
+<p align="center">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Logo" width="80" height="80">
+  </a>
+
+  <h3 align="center">Prak Pemrog 1</h3>
+
+  <p align="center">
+    Kumpulan Algoritma dari Praltikum Pemrograman 1
+    <br/>
+</p>
+
+## About The Project
+
+Sesuaikan branch dengan pertemuan yang sudah di lakukan
+
+## List Pertemuan
+
+* Pertemuan 1<br/>
+  Membahas tentang List(add tail)
+
+* Pertemuan 2<br/>
+  Membahas tentang Sorting(insertion dan buble)
+
+* Pertemuan 3<br/>
+  Membahas tentang List(add head dan add middle)
+
+
 ## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+### Prerequisites
 
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+1. Cek pertemuan di branch
+```sh
+git branch
+```
+2. Masuk ke branch
+```sh
+git checkout namabranch
+```
+3. Good Luck!
