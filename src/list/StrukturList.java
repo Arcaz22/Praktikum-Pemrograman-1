@@ -60,6 +60,59 @@ public class StrukturList {
     }
   }
 
+  public void removeHead() {
+    if (isEmpty()) {
+      System.out.println("List Kosong");
+    } else {
+      Node temp = HEAD;
+      HEAD = HEAD.getNext();
+      temp = null;
+    }
+  }
+
+  public void removeTail() {
+    if (HEAD != null) {
+      if (HEAD.next == null) {
+        HEAD = null;
+      } else {
+        Node lastNode = HEAD;
+        Node preNode = null;
+        while (lastNode.next != null) {
+            preNode = lastNode;
+            lastNode = lastNode.next;
+        }
+        preNode.next = null;
+        lastNode = null;
+      }
+    }
+  }
+
+  public void removeMid(int x) {
+    if (HEAD != null) {
+      boolean ketemu = false;
+      int i = 1;
+      Node delNode = HEAD;
+      Node preNode = null;
+      while (delNode.next != null && !ketemu) {
+        if (delNode.data == x) {
+          ketemu = true;
+        } else {
+          preNode = delNode;
+          delNode = delNode.next;
+          i++;
+        }
+      }
+      if (ketemu) {
+        if (i == 1) {
+          HEAD = HEAD.next;
+        } else {
+          preNode.next = delNode.next;
+          delNode = null;
+        }
+      }
+    }
+  }
+
   public void display() {
     Node currentNode = HEAD;
     while (currentNode != null) {
