@@ -4,11 +4,11 @@ public class TestList {
   public static void main(String[] args) {
     System.out.println("Add head, mid, tail");
     StrukturList addMid = new StrukturList();
+    addMid.addTail(2);
+    addMid.addTail(6);
     addMid.addTail(3);
-    addMid.addTail(4);
-    addMid.addMid(7, 2);
-    addMid.addMid(8, 2);
-    addMid.addHead(5);
+    addMid.addTail(5);
+    addMid.addTail(1);
     addMid.display();
 
     System.out.println("\n ----------------------------------");
@@ -23,7 +23,7 @@ public class TestList {
 
     System.out.println("\n ----------------------------------");
     System.out.println("Remove Mid");
-    addMid.removeMid(7);
+    addMid.removeMid(9);
     addMid.display();
-}
+  }
 }
