@@ -24,64 +24,33 @@ public class StrukturList {
     }
   }
 
-  public void removeHead() {
-    if (isEmpty()) {
-      System.out.println("List Kosong");
-    } else {
-      Node temp = HEAD;
-      HEAD = HEAD.getNext();
-      temp = null;
-    }
-  }
+  public boolean find(int x) {
+    Node currentNode;
+    boolean found;
 
-  public void removeTail() {
-    if (HEAD != null) {
-      if (HEAD.next == null) {
-        HEAD = null;
-      } else {
-        Node lastNode = HEAD;
-        Node preNode = null;
-        while (lastNode.next != null) {
-            preNode = lastNode;
-            lastNode = lastNode.next;
-        }
-        preNode.next = null;
-        lastNode = null;
-      }
-    }
-  }
-
-  public void removeMid(int x) {
-    Node previousNode = null, 
     currentNode = HEAD;
-    boolean found = false;
-
-    if (isEmpty()) {
-      System.out.println("List Kosong");
-      return;
-    }
-  
-    while (currentNode != null && !found) {
-      if (currentNode.getData() == x) {
+    found = false;
+    
+    while(currentNode != null && !found) {
+      if (currentNode.getData() == x) 
         found = true;
-      } else {
-        previousNode = currentNode;
+      else 
         currentNode = currentNode.getNext();
-      }
     }
+    return found;
+  }
 
-    if (!found) {
-      System.out.println("Node dengan nilai " + x + " tidak ditemukan!");
-      return;
+  public int size() {
+    Node currentNode;
+    int amount;
+
+    currentNode = HEAD;
+    amount = 0;
+    while (currentNode != null) {
+      amount++;
+      currentNode = currentNode.next;
     }
-  
-    if (previousNode == null) {
-      HEAD = HEAD.getNext();
-    } else {
-      previousNode.setNext(currentNode.getNext());
-    }
-  
-    currentNode.setNext(null);
+    return amount;
   }
 
   public void display() {
